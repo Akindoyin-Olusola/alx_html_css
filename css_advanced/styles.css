@@ -136,3 +136,77 @@ main section:first-of-type img {
   font-size: 14px;
   opacity: 0.9;
 }
+/* Tutorials section */
+.tutorials {
+  padding: 60px 20px;
+  background-color: white;
+  color: #071629;
+  text-align: center;
+}
+
+.tutorials h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.tutorials h2 span {
+  color: #c271ff;
+  font-weight: bold;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0 0 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card h3 {
+  font-size: 18px;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+}
+
+.card .author {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card .author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.card .author p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card .rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #b2b2b2;
+}
