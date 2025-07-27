@@ -97,3 +97,42 @@ main section:first-of-type img {
   border-radius: 50%;
   margin-bottom: 10px;
 }
+
+/* Quote section */
+.quote {
+  background-color: #c271ff;
+  padding: 60px 20px;
+  color: white;
+}
+
+.quote .container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.quote img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.quote blockquote {
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.quote-text strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.quote-text p:last-child {
+  font-size: 14px;
+  opacity: 0.9;
+}
