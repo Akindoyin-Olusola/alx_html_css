@@ -1,343 +1,287 @@
-/* General reset */
+/* Reset default margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body font and background */
 body {
   font-family: 'Arial', sans-serif;
+  line-height: 1.6;
   color: #fff;
-  background-color: #fff;
+  background-color: #12172B; /* Matches Figma footer bg */
 }
 
-/* Header section */
+/* Container utility */
+section, header, footer {
+  width: 100%;
+  padding: 60px 20px;
+}
+
+/* Center all headings */
+h1, h2, h3, h4 {
+  text-align: center;
+}
+/* Header */
 header {
-  background: linear-gradient(to bottom, #071629, #2f2f57);
-  padding: 20px 40px;
-}
-
-nav {
+  background: transparent;
+  padding: 20px 60px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Arial, sans-serif;
 }
 
-nav ul {
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header img {
+  height: 40px;
+}
+
+header ul {
+  list-style: none;
   display: flex;
   gap: 30px;
-  list-style: none;
 }
 
-nav ul li a {
-  color: white;
+header ul li a {
   text-decoration: none;
-  font-weight: 600;
+  color: white;
+  font-weight: 500;
   font-size: 14px;
 }
-
-/* First section "Get schooled" */
-main section:first-of-type {
-  background: linear-gradient(to bottom, #071629, #2f2f57);
-  text-align: center;
-  padding: 60px 20px;
-}
-
-main section:first-of-type h1 {
-  font-size: 64px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-main section:first-of-type span {
-  margin: 0 10px;
-  font-weight: 600;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-main section:first-of-type button {
-  margin-top: 30px;
-  padding: 12px 30px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #c271ff;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-/* Subsection: "Learn from the pros" */
-main section:first-of-type h2 {
-  margin-top: 80px;
-  font-size: 32px;
-  font-weight: 400;
-}
-
-main section:first-of-type h2 span {
-  font-weight: bold;
-  color: #c271ff;
-}
-
-main section:first-of-type > div:last-child {
+/* Quote Section */
+main > section:nth-of-type(2) {
+  background-color: #C271FF;
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
-}
-
-main section:first-of-type > div:last-child div {
-  text-align: center;
-  max-width: 180px;
-}
-
-main section:first-of-type img {
-  width: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-/* Quote section */
-.quote {
-  background-color: #c271ff;
-  padding: 60px 20px;
-  color: white;
-}
-
-.quote .container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 60px;
+  color: white;
+  padding: 80px 20px;
+  flex-wrap: wrap;
 }
 
-.quote img {
+/* Quote Image */
+main > section:nth-of-type(2) img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-.quote blockquote {
+/* Quote Block */
+main > section:nth-of-type(2) blockquote {
+  font-size: 22px;
   font-style: italic;
-  font-size: 20px;
   line-height: 1.6;
+  max-width: 500px;
   margin-bottom: 20px;
 }
 
-.quote-text strong {
-  display: block;
+/* Quote Name */
+main > section:nth-of-type(2) h3 {
   font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.quote-text p:last-child {
-  font-size: 14px;
-  opacity: 0.9;
-}
-/* Tutorials section */
-.tutorials {
-  padding: 60px 20px;
-  background-color: white;
-  color: #071629;
-  text-align: center;
-}
-
-.tutorials h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.tutorials h2 span {
-  color: #c271ff;
   font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.cards {
+/* Quote Role */
+main > section:nth-of-type(2) p {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+/* Popular Tutorials Section */
+main > section:nth-of-type(3) {
+  background-color: #fff;
+  padding: 80px 40px;
+  text-align: center;
+  color: #071629;
+}
+
+main > section:nth-of-type(3) h2 {
+  font-size: 32px;
+  color: #071629;
+  margin-bottom: 50px;
+}
+
+/* Video Cards Container */
+main > section:nth-of-type(3) > div {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
+  justify-items: center;
 }
 
-.card {
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 0 0 20px;
-  border-radius: 8px;
+/* Individual Video Card */
+main > section:nth-of-type(3) > div > div {
+  background-color: #fff;
+  max-width: 250px;
   text-align: left;
 }
 
-.card img {
+/* Thumbnail Image */
+main > section:nth-of-type(3) img {
   width: 100%;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  height: auto;
+  border-radius: 5px;
 }
 
-.card h3 {
+/* Title */
+main > section:nth-of-type(3) h3 {
   font-size: 18px;
-  padding: 10px 15px;
-  margin-bottom: 5px;
+  margin: 10px 0 5px;
 }
 
-.card .author {
+/* Description */
+main > section:nth-of-type(3) p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6B6B6B;
+}
+
+/* Author Info */
+main > section:nth-of-type(3) h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+main > section:nth-of-type(3) > div > div > div:first-of-type {
   display: flex;
   align-items: center;
-  padding: 0 15px;
-  gap: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
-.card .author img {
+main > section:nth-of-type(3) > div > div > div:first-of-type img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
 
-.card .author p {
-  font-size: 14px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card .rating {
+/* Stars & Duration */
+main > section:nth-of-type(3) > div > div > div:nth-of-type(2) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-  font-size: 14px;
-  color: #b2b2b2;
-}/* Membership section */
-.membership {
-  background-color: #071629;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
+  gap: 5px;
+  color: #C271FF;
+  margin: 10px 0;
 }
 
-.membership h2 {
-  font-size: 32px;
-  margin-bottom: 50px;
-}
-
-.membership h2 span {
-  color: #c271ff;
+main > section:nth-of-type(3) p:last-of-type {
+  font-size: 12px;
   font-weight: bold;
+  color: #C271FF;
 }
-
-.membership .items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-.membership .item {
-  max-width: 220px;
-}
-
-.membership .item img {
-  height: 50px;
-  margin-bottom: 20px;
-}
-
-.membership .item h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.membership .item p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.membership button {
-  padding: 12px 30px;
-  font-size: 16px;
-  background-color: #c271ff;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-}
-/* FAQ section */
-.faq {
-  background-color: #f9f9f9;
+<section>
+  <h2>Free membership</h2>
+  <div>
+    <!-- Repeated 4 times -->
+    <div>
+      <img src="./images/smile.svg" alt="">
+      <h3>Lorem Ipsum</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    ...
+  </div>
+  <button>REGISTER FOR FREE</button>
+</section>
+/* FAQ Section */
+main > section:nth-of-type(5) {
+  background-color: white;
   color: #071629;
+  padding: 80px 40px;
+  font-family: Arial, sans-serif;
+}
+
+/* Section Heading */
+main > section:nth-of-type(5) h2 {
   text-align: center;
-  padding: 80px 20px;
-}
-
-.faq h2 {
   font-size: 32px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
-.faq-container {
+/* 2-Column Layout */
+main > section:nth-of-type(5) > div {
   display: flex;
-  flex-wrap: wrap;
+  gap: 40px;
   justify-content: center;
-  gap: 60px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
+  flex-wrap: wrap;
 }
 
-.faq-column {
-  flex: 1;
-  min-width: 300px;
-  max-width: 450px;
+/* Each Column */
+main > section:nth-of-type(5) > div > div {
+  max-width: 500px;
 }
 
-.faq-item {
-  margin-bottom: 40px;
-}
-
-.faq-item h3 {
-  font-size: 18px;
+/* Each Q&A */
+main > section:nth-of-type(5) h3 {
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.faq-item p {
+main > section:nth-of-type(5) div div p,
+main > section:nth-of-type(5) div div div:last-of-type {
   font-size: 14px;
+  color: #6B6B6B;
+  margin-bottom: 30px;
   line-height: 1.6;
-  color: #4a4a4a;
 }
-
-/* Footer */
-.footer {
+/* First FAQ Box with pink border */
+main > section:nth-of-type(5) > div > div:first-of-type > div:first-of-type + div {
+  border: 1px solid #C271FF;
+  padding: 20px;
+  border-radius: 4px;
+}
+/* Footer Section */
+footer {
   background-color: #071629;
   color: white;
-  text-align: center;
   padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.footer-content {
+/* Center everything */
+footer section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 40px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.footer .logo {
+/* Logo */
+footer img {
   height: 40px;
+  margin-bottom: 10px;
 }
 
-.social-icons i {
+/* Social Icons */
+footer i {
   font-size: 20px;
-  color: white;
   margin: 0 10px;
-  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
 }
 
-.footer-text {
-  font-size: 14px;
-  opacity: 0.7;
+footer i:hover {
+  color: #C271FF;
+}
+
+/* Copyright Text */
+footer p {
+  font-size: 12px;
+  color: #bcbcbc;
+  margin-top: 10px;
 }
