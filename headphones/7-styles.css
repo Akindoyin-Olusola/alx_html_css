@@ -1,0 +1,106 @@
+/* WHAT WE DO */
+.what-we-do {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  color: black;
+}
+
+.what-we-do h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.what-we-do p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.service {
+  max-width: 250px;
+  animation: float 3s ease-in-out infinite; /* Continuous subtle animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Hover effect */
+.service:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* OUR RESULTS SECTION */
+#results {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#results h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+#results p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.result-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: float 3s ease-in-out infinite; /* Continuous subtle animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-item:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Floating keyframe animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
